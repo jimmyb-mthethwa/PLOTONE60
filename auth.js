@@ -1,48 +1,28 @@
-const loginForm = document.getElementById('loginForm');
-const registerForm = document.getElementById('registerForm');
+const loginForm = document.getElementById("loginForm");
 
-if(loginForm){
-    loginForm.addEventListener('submit', (e)=>{
-        e.preventDefault();
+loginForm.addEventListener("submit", function(e) {
+    e.preventDefault();
 
-        alert('Login Successful');
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-        window.location.href = 'dashboard.html';
-    });
-}
+    // ONLY ONE LOGIN ACCOUNT
+    const correctEmail = "sales@nurdrip.co.za";
+    const correctPassword = "nurd2273";
 
-if(registerForm){
-    registerForm.addEventListener('submit', (e)=>{
-        e.preventDefault();
+    if (email === correctEmail && password === correctPassword) {
 
-        alert('Account Created');
+        alert("Login Successful!");
 
-        window.location.href = 'dashboard.html';
-    });
-}
-function login(){
+        // Save login status
+        localStorage.setItem("loggedIn", "true");
 
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    /* SIMPLE LOGIN */
-
-    if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
-
+        // Redirect to dashboard
         window.location.href = "dashboard.html";
 
-    }
+    } else {
 
-    else if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
-
-        window.location.href = "dashboard.html";
+        alert("Invalid Email or Password!");
 
     }
-
-    else{
-
-        alert("Invalid Login");
-
-    }
-
-}
+});
