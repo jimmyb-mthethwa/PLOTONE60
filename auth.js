@@ -20,3 +20,29 @@ if(registerForm){
         window.location.href = 'index.html';
     });
 }
+function login(){
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    /* SIMPLE LOGIN */
+
+    if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
+
+        window.location.href = "index.html";
+
+    }
+
+    else if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
+
+        window.location.href = "index.html";
+
+    }
+
+    else{
+
+        alert("Invalid Login");
+
+    }
+
+}
