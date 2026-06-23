@@ -17,7 +17,7 @@ if(registerForm){
 
         alert('Account Created');
 
-        window.location.href = 'index.html';
+        window.location.href = 'dashboard.html';
     });
 }
 function login(){
@@ -29,13 +29,13 @@ function login(){
 
     if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
 
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
 
     }
 
     else if(email === "sales@nurdrip.co.za" && password === "nurd2273"){
 
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
 
     }
 
