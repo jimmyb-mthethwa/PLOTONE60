@@ -1,28 +1,22 @@
-const loginForm = document.getElementById("loginForm");
+const loginForm = document.getElementById('loginForm');
+const registerForm = document.getElementById('registerForm');
 
-loginForm.addEventListener("submit", function(e) {
-    e.preventDefault();
+if(loginForm){
+    loginForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+        alert('Login Successful');
 
-    // ONLY ONE LOGIN ACCOUNT
-    const correctEmail = "sales@nurdrip.co.za";
-    const correctPassword = "nurd2273";
+        window.location.href = 'dashboard.html';
+    });
+}
 
-    if (email === correctEmail && password === correctPassword) {
+if(registerForm){
+    registerForm.addEventListener('submit', (e)=>{
+        e.preventDefault();
 
-        alert("Login Successful!");
+        alert('Account Created');
 
-        // Save login status
-        localStorage.setItem("loggedIn", "true");
-
-        // Redirect to dashboard
-        window.location.href = "dashboard.html";
-
-    } else {
-
-        alert("Invalid Email or Password!");
-
-    }
-});
+        window.location.href = 'index.html';
+    });
+}
