@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLOT160 Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <aside class="sidebar">
+    <h2>PLOT ONE60</h2>
+
+   <ul>
+  <li class="active" onclick="window.location.href='dashboard.html'">Dashboard</li>
+  <li onclick="window.location.href='customer.html'">Customers</li>
+  <li onclick="window.location.href='inventory.html'">Inventory</li>
+  <li>Sales</li>
+  <li>Analytics</li>
+  <li>Settings</li>
+</ul>
+  </aside>
+
+  <main class="main-content">
+
+    <div class="cards">
+
+  <div class="card">
+    <h3>Total Customers</h3>
+    <p id="totalCustomers">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Total Products</h3>
+    <p id="totalProducts">0</p>
+  </div>
+
+  <div class="card">
+    <h3>Inventory Items</h3>
+    <p id="inventoryItems">0</p>
+  </div>
+
+</div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
